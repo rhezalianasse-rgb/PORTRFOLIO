@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Art Anass — Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive personal portfolio built with React, Three.js, React Three Fiber, Drei, Framer Motion, and Lucide. The 3D hero is a real-time scene; personal details and portfolio content are configured centrally.
 
-## Available Scripts
+## Windows setup
 
-In the project directory, you can run:
+Install a current Node.js LTS release, open PowerShell in this folder, and run:
 
-### `npm start`
+```powershell
+npm install
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open the URL Vite prints in the terminal (usually [http://localhost:5173](http://localhost:5173)).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Personalize the portfolio
 
-### `npm test`
+Edit [`src/data/portfolio.js`](./src/data/portfolio.js) to update the name, education, profile image path, skills, projects, email, and social links.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Place your real portrait at `public/images/profile.png`. The configured path is `/images/profile.png`; use the original photo so your appearance is not altered. The visual frame shows a neutral add-photo treatment until the image is present.
+- Add only skills you have confirmed to `skills`.
+- Add project objects to `projects` with a `title`, `description`, and only supplied `technologies`, `image`, `github`, `demo`, or `status` values. Actions are omitted if their URLs are blank.
+- Add your real email and social URLs when ready. The contact form is intentionally a front-end preview and does not send or store messages. To receive submissions, connect a secure server-side form endpoint or trusted form provider; never put private API keys in the browser.
+- Update the Open Graph image in `public/index.html` if you want a separate social preview image.
 
-### `npm run build`
+## Commands
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```powershell
+npm start
+npm test
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The production build is written to `dist/`. `npm run preview` serves that build locally.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deploy
 
-### `npm run eject`
+### Vercel
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Import the repository in Vercel. Use `npm run build` as the build command and `dist` as the output directory. No environment variables are required for the portfolio as configured.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Netlify
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Import the repository in Netlify. Use `npm run build` as the build command and `dist` as the publish directory. No environment variables are required for the portfolio as configured.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Favicon
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The custom `public/favicon.svg` is used as the browser favicon. Replace it to change the tab icon; `public/favicon.ico` and `public/logo192.png` remain fallback/PWA assets from the starter project.
