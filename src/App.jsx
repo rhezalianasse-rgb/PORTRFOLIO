@@ -112,7 +112,7 @@ function Portrait() {
           />
         ) : (
           <div className="portrait-empty" aria-label="Portrait not added yet">
-            <span className="portrait-initials">AA</span>
+            <span className="portrait-initials">RA</span>
             <span className="portrait-empty-note">YOUR PORTRAIT GOES HERE</span>
           </div>
         )}
@@ -380,7 +380,7 @@ function Footer() {
     <footer className="site-footer section-shell">
       <a className="footer-brand" href="#home">{portfolio.name.toUpperCase()}<span>.</span></a>
       <span className="footer-credit">Designed &amp; built with React <span className="footer-heart">✳</span></span>
-      <span className="footer-copyright">© {new Date().getFullYear()} ART ANASS</span>
+      <span className="footer-copyright">© {new Date().getFullYear()} RHEZALI ANASS</span>
     </footer>
   );
 }
